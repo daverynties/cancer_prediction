@@ -5,8 +5,6 @@ Factors</span>
 
 <span class="s1">Lucas K. Ausbury</span>
 
-<span class="s1"></span>\
-
 <span class="s1">Using a risk model dataset of 280,000+ records taken
 with permission from the Breast Cancer Surveillance Consortium (BCSC),
 we plan on creating a predictive algorithm which calculates the risk
@@ -21,8 +19,6 @@ catch the tumor early. If caught early, the chances of death are quite
 small in comparison to catching it late. Much more manageable.<span
 class="Apple-converted-space"> </span></span>
 
-<span class="s1"></span>\
-
 <span class="s1">Firstly, we intend to calculate which variables provide
 the most significant information towards risk. This will be done with
 each individual variable. Those of which show the least significant may
@@ -33,21 +29,15 @@ will be a big factor so this may have to be done for each different age
 group. Maybe we can show the likelihood of developing breast cancer
 through a graph with time on the x and risk probability on the y.</span>
 
-<span class="s1"></span>\
-
 <span class="s1">Deliverables will contain graphs and predictive models
 based on variables found within this dataset.<span
 class="Apple-converted-space"> </span></span>
-
-<span class="s1"></span>\
 
 <span class="s1">We also have a dataset of mammogram images taken from
 the Mammographic Image Analysis Society. If we have time, we may attempt
 to add an image processing component using a convoluted neural network
 or something similar to analyze pixel density / color based on size,
 position, and composition.</span>
-
-<span class="s1"></span>\
 
 <span class="s1">Once completed, it would be great if users could enter
 their data, get a risk prediction of breast cancer, if that prediction
