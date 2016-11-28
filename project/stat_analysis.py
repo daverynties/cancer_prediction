@@ -9,13 +9,15 @@ with open(f, 'rt') as data:
 	reader = csv.reader(data)
 
 	for row in reader:
-	#	if not first:
-	#		i = int(row[1])
-	#		j = int(row[10])
+		if not first:
+			i = int(row[0])
+			j = int(row[5])
 
-	#		print("%i, %i" % (i, j))
-	#		stats[i][j] = stats[i][j] + 1
-	#	else:
-	#		first = False
+			if i > 5 or j > 2:
+				print("%i, %i" % (i, j))
+			else:
+				stats[i][j] = stats[i][j] + 1
+		else:
+			first = False
 
-		print(row)
+print(stats)

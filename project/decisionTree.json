@@ -1,0 +1,168 @@
+{
+	'discriminants':{
+		0:'Clump Thickness',
+		1:'Uniformity of Cell Size',
+		2:'Uniformity of Cell Shape',
+		3:'Marginal Adhesion',
+		4:'Single Epithelial Cell Size',
+		5:'Bare Nuclei',
+		6:'Bland Chromatin',
+		7:'Normal Nucleoli',
+		8:'Mitoses'
+	},'classes':{
+		0:'Benign',
+		1:'Malignant'
+	},'data':{
+		'fulcrum':1,
+		'branches':{
+			'less than or equal to 2':{
+				'fulcrum':5,
+				'branches':{
+					'less than or equal to 3':{
+						'fulcrum':-1,
+						'class':0,
+						'probability':0.9950664792
+					},'greater than 3':{
+						'fulcrum':0,
+						'branches':{
+							'less than or equal to 3':{
+								'fulcrum':-1,
+								'class':0,
+								'probability':1
+							},'greater than 3':{
+								'fulcrum':6,
+								'branches':{
+									'less than or equal to 2':{
+										'fulcrum':3,
+										'branches':{
+											'less than or equal to 3':{
+												'fulcrum':-1,
+												'class':1,
+												'probability':1
+											},'greater than 3':{
+												'fulcrum':-1,
+												'class':0,
+												'probability':1
+											}
+										}
+									},'greater than 2':{
+										'fulcrum':-1,
+										'class':1,
+										'probability':0.9925558313
+									}
+								}
+							}
+						}
+					}
+				}
+			},'greater than 2':{
+				'fulcrum':2,
+				'branches':{
+					'less than or equal to 2':{
+						'fulcrum':0,
+						'branches':{
+							'less than or equal to 5':{
+								'fulcrum':3,
+								'branches':{
+									'less than or equal to 7':{
+										'fulcrum':-1,
+										'class':0,
+										'probability':1
+									},
+									'greater than 7':{
+										'fulcrum':-1,
+										'class':1,
+										'probability':1
+									}
+								}
+							},'greater than 5':{
+								'fulcrum':-1,
+								'class':1,
+								'probability':1
+							}
+						}
+					},'greater than 2':{
+						'fulcrum':1,
+						'branches':{
+							'less than or equal to 4':{
+								'fulcrum':5,
+								'branches':{
+									'less than or equal to 2':{
+										'fulcrum':3,
+										'branches':{
+											'less than or equal to 3':{
+												'fulcrum':7,
+												'branches':{
+													'less than or equal to 7':{
+														'fulcrum':-1,
+														'class':0,
+														'probability':0.9798270893
+													},'greater than 7':{
+														'fulcrum':-1,
+														'class':1,
+														'probability':1
+													}
+												}
+											},'greater than 3':{
+												'fulcrum':-1,
+												'class':1,
+												'probability':1
+											}
+										}
+									},'greater than 2':{
+										'fulcrum':0,
+										'branches':{
+											'less than or equal to 6':{
+												'fulcrum':1,
+												'branches':{
+													'less than or equal to 3':{
+														'fulcrum':0,
+														'branches':{
+															'less than or equal to 5':{
+																'fulcrum':-1,
+																'class':1,
+																'probability':0.9166666667
+															},'greater than 5':{
+																'fulcrum':-1,
+																'class':0,
+																'probability':1
+															}
+														}
+													},'greater than 3':{
+														fulcrum':3,
+														'branches':{
+															'less than or equal to 5':{
+																'fulcrum':-1,
+																'class':0,
+																'probability':0.8272884283
+															},
+															'greater than 5':{
+																'fulcrum':-1,
+																'class':1,
+																'probability':1
+															}
+														}
+													}
+												}
+											},
+											'greater than 6':{
+												'fulcrum':-1,
+												'class':1,
+												'probability':0.9685435672
+											}
+										}
+									}
+								}
+							},
+							'greater than 4':{
+								'fulcrum':-1,
+								'class':1,
+								'probability':0.9717514124
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
