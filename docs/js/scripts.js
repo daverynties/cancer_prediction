@@ -3,7 +3,7 @@ var node_dir = {}, decd_dir = {};
 var discriminants = {}, classes = {};
 
 function buildTree() {
-	$.getJSON("/docs/decisionTree.json", function( out ) {
+	$.getJSON("/cancer_prediction/decisionTree.json", function( out ) {
 		var t1 = null;
 		var t2 = null;
 		var x = null;
