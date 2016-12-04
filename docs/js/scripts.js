@@ -3,7 +3,7 @@ var node_dir = {}, decd_dir = {};
 var discriminants = {}, classes = {};
 
 function buildTree() {
-	$.getJSON("http://lucasausbury.github.io/dev/decisionTree.json", function( out ) {
+	$.getJSON("/docs/decisionTree.json", function( out ) {
 		var t1 = null;
 		var t2 = null;
 		var x = null;
