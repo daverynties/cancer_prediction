@@ -1,43 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>A Predictive Analysis of Breast Cancer Risk Factors</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+		<style>
+			h3, h4, h5 {
+				color: rgba(233,30,99,.75);
+			}
+			header {
+				display:block;
+				background-color:#E91E63;
+				padding:8rem 1rem 2rem;
+				-webkit-box-sizing:border-box;
+				   -moz-box-sizing:border-box;
+						box-sizing:border-box;
+				border:.5rem solid rgba(255,255,255,.25);
+			}
+			.header-title {
+				color:#fff;
+				font-size:3.5rem;
+				font-weight:400;
+				line-height:1.5;
+				padding:0;
+				margin:0 auto;
+				overflow:hidden;
+			}
+			.container {
+				padding:0 1rem 2rem;
+			}
+			footer {
+				margin:2rem auto 1rem;
+				padding:2rem 3rem;
+				border:.5rem solid rgba(233,30,99,.75);
+			}
+			footer h4 {
+				position:relative;
+				font-size:2.5rem;
+				padding-left:1rem;
+			}
+			footer h4 em {
+				position:absolute;
+				top:-2rem;
+				left:-2.5rem;
+				font-style:normal;
+				font-size:7.5rem;
+			}
+			.container, .header-title, footer {
+				width:1160px;
+			}
+			.card-success {
+				background-color:#4CAF50;
+			}
+			.card-warning {
+				background-color:#FF9800;
+			}
+			.card-danger {
+				background-color:#F44336;
+			}
+			section {
+				padding-top:2rem;
+			}
+			@media screen and (max-width:1240px) {
+				.container, .header-title, footer {
+					width:760px;
+				}
+			}
+			@media screen and (max-width:760px) {
+				.container, .header-title, footer {
+					font-size:1.5rem;
+					width:360px;
+					margin-left:0;
+				}
+			}
+		</style>
 	</head><body>
-		<div class="container">
-			<h1>A Predictive Analysis of Breast Cancer Risk Factors</h1>
-			<p class="lead">Lorem ipsum</p>
+		<header>
+			<div class="header-title">
+				<h1>A Predictive Analysis of Breast Cancer Risk Factors</h1>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+				<h3>What is this?</h3>
+				<p class="lead">This is a front-end application built to traverse a decision tree by answering the series of questions below. This particular decision tree was built by analyzing a set of 699 patient samples; it is designed to classify a sample as either benign or malignant based on the attributes given in the dataset.</p>
 
-			<div id="root"></div>
+				<h3>Decision tree navigator</h3>
+				<div id="root"></div>
 
-			<div id="templates">
-				<div class="node-template">
-					<div class="form-group">
-						<label class="control-label"></label>
-						<div class="control-options" style="padding-left:2rem;"></div>
-					</div>
-				</div><div class="decider-template">
-					<label class="custom-control custom-radio">
-						<input type="radio" class="custom-control-input">
-						<span class="custom-control-indicator"></span>
-						<span class="custom-control-description"></span>
-					</label>
-				</div><div class="result-template">
-					<div class="form-group" style="padding:1.5rem;">
-						<h4 class="class_label"></h4>
-						<p class="lead">According to the data we analyzed, this scenario has an 
-							<span class="probability"></span>% chance of being 
-							<strong class="class_label" style="text-transform:lowercase;"></strong>.</p>
+				<h3>Resources</h3>
+				<ul>
+					<li><a href="http://mlr.cs.umass.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29" target="_blank">Link to dataset</a></li>
+					<li><a href="img/tree.png" target="_blank">Link to image of complete decision tree</a></li>
+					<li><a href="https://github.com/daverynties/cancer_prediction" target="_blank">Link to GitHub repo of entire project</a></li>
+				</ul>
+
+				<div id="templates">
+					<div class="node-template">
+						<div class="form-group">
+							<label class="control-label">
+								<span class="counter"></span>. <span class="node_label"></span>
+							</label>
+							<div class="control-options" style="padding-left:2rem;"></div>
+						</div>
+					</div><div class="decider-template">
+						<label class="custom-control custom-radio">
+							<input type="radio" class="custom-control-input">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description"></span>
+						</label>
+					</div><div class="result-template">
+						<div class="card card-inverse">
+							<div class="card-block">
+								<h4 class="card-title"><span class="class_label"></span>*</h4>
+								<p class="card-text lead">According to the data we analyzed, this scenario has an 
+									<span class="probability"></span>% chance of being 
+									<strong class="class_label" style="text-transform:lowercase;"></strong>.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<footer>
+			<h4><em>*</em> Note</h4>
+			<p class="lead">While we were able to get pretty accurate results, this is based off of a dataset that only included 699 samples. It is probably not a good idea to use this as an actual medical tool in its current form.</p>
+		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/transparency/0.9.9/transparency.min.js" integrity="sha256-V1+qsI6VkzufSFDRbBez+P0X+6ZDFNvdZf06oACT2qU=" crossorigin="anonymous"></script>
-		<script src="./js/scripts.js"></script>
+		<script src="./js/scripts-min.js"></script>
 	</body>
 </html>

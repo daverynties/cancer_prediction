@@ -3,7 +3,7 @@ var node_dir = {}, decd_dir = {};
 var discriminants = {}, classes = {};
 
 function buildTree() {
-	$.getJSON("/cancer_prediction/decisionTree.json", function( out ) {
+	$.getJSON("http://lucasausbury.github.io/dev/decisionTree.json", function( out ) {
 		var t1 = null;
 		var t2 = null;
 		var x = null;
@@ -25,7 +25,7 @@ function buildTree() {
 
 			$t.addClass('target_' + x.counter );
 
-			if( x.counter == 1 ) $t.show();
+			if( x.counter == 1 ) { $t.find('.counter').text('1'); $t.show(); }
 			else $t.hide();
 
 			$root.append( $t );
@@ -39,9 +39,9 @@ $(document).ready(function() {
 	$decd_tmp = $('.decider-template').detach();
 	$rslt_tmp = $('.result-template').detach();
 	node_dir = {
-		'control-label':{
+		'node_label':{
 			'text':function( params ){
-				return this.counter + '. ' + discriminants[this.fulcrum];
+				return discriminants[this.fulcrum];
 			}
 		}, 'control-options':{
 			'html':function( params ) {
@@ -73,6 +73,15 @@ $(document).ready(function() {
 			'text':function( params ) {
 				return (parseFloat(this.probability) * 100).toFixed(2);
 			}
+		}, 'card':{
+			'html':function( params ) {
+				var _t = $(params.element);
+
+				if( parseFloat(this.probability) < .95 ) _t.addClass('card-warning');
+				else if( this.class === "0" ) _t.addClass('card-success');
+				else if( this.class === "1" ) _t.addClass('card-danger');
+				else _t.removeClass('card-inverse');
+			}
 		}
 	};
 
@@ -81,11 +90,13 @@ $(document).ready(function() {
 	$(document).on('click', 'input[type="radio"]', function() {
 		var grandparent = $(this).closest('.node-template, .result-template');
 		var parent = $(this).closest('.decider-template');
+		var counter = parseInt(grandparent.find('.counter').text()) + 1;
 		var target = ".target_" + parent.data('target');
 
 		$('.active').removeClass('active');
 		grandparent.addClass('active');
 		$('.active').nextAll('.node-template, .result-template').slideUp();
+		$(target).find('.counter').text( counter );
 		$(target).slideDown();
 	});
 });
