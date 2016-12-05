@@ -1,9 +1,9 @@
-var $root = null, $node_tmp = null, $decd_tmp = null;
-var node_dir = {}, decd_dir = {};
+var $root = null, $node_tmp = null, $decd_tmp = null, $rslt_tmp = null;
+var node_dir = {}, decd_dir = {}, rslt_dir = {};
 var discriminants = {}, classes = {};
 
 function buildTree() {
-	$.getJSON("http://lucasausbury.github.io/dev/decisionTree.json", function( out ) {
+	$.getJSON("../decisionTree.json", function( out ) {
 		var t1 = null;
 		var t2 = null;
 		var x = null;
