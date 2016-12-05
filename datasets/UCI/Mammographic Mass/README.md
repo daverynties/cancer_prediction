@@ -6,6 +6,7 @@ based on BI-RADS attributes and the patient’s age
 **Number of attributes:** 6
 
 **Source:**
+
 Matthias Elter
 Fraunhofer Institute for Integrated Circuits (IIS)
 Image Processing and Medical Engineering Department (BMT)
@@ -20,6 +21,7 @@ Universitätsstraße 21-23
 91054 Erlangen, Germany
 
 **Data set information:**
+
 Mammography is the most effective
 method for breast cancer screening available today. However, the low
 positive predictive value of breast biopsy resulting from mammogram
@@ -49,10 +51,12 @@ calculated. These can be an indication of how well a CAD system performs
 compared to the radiologists.
 
 **Class distribution:**
+
 -   Benign: 516
 -   Malignant: 445
 
 **Attributes:**
+
 1.  BI-RADS assessment: 1 to 5 (ordinal, non-predictive)
 2.  Age: patient’s age in years (continuous)
 3.  Shape of mass: 1=round, 2=oval, 3=lobular, 4=irregular (nominal)
@@ -62,6 +66,9 @@ compared to the radiologists.
 6.  Severity: 0=benign, 1=malignant (binomial, goal field)
 
 **Citation request:**
+
 M. Elter, R. Schulz-Wendtland and T. Wittenberg (2007) *The prediction of breast cancer biopsy outcomes using two CAD approaches that both emphasize an intelligible decision process.* Medical Physics 34(11), pp. 4164-4172
 
-**Source:** http://archive.ics.uci.edu/ml/datasets/Mammographic+Mass
+**Source:** 
+
+http://archive.ics.uci.edu/ml/datasets/Mammographic+Mass

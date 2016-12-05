@@ -1,16 +1,17 @@
 **Breast Cancer Wisconsin (Original) Data Set**
 
 **Source**
-Creator:
-Dr. William H. Wolberg (physician)
+
+Created by Dr. William H. Wolberg (physician)
 University of Wisconsin Hospitals
 Madison, Wisconsin, USA
 
-Donor:
-Olvi Mangasarian (mangasarian@cs.wisc.edu)
+Donated by Olvi Mangasarian (mangasarian@cs.wisc.edu)
+
 Received by David W. Aha (aha@cs.jhu.edu)
 
 **Data Set Information**
+
 Samples arrive periodically as Dr. Wolberg reports his clinical cases. The database therefore reflects this chronological grouping of the data. This grouping information appears immediately below, having been removed from the data itself:
 
 | Name      | Number of instances | Date added    |
@@ -34,6 +35,7 @@ Note that the results summarized above in Past Usage refer to a dataset of size 
 -   Changed 0 to 1 in field 8 of sample 1182404,2,3,1,1,1,2,0,1,1,1
 
 **Attribute Information**
+
 1.  Sample code number: id number
 2.  Clump Thickness: 1 - 10
 3.  Uniformity of Cell Size: 1 - 10
@@ -47,11 +49,13 @@ Note that the results summarized above in Past Usage refer to a dataset of size 
 11.  Class: (2 for benign, 4 for malignant)
 
 **Relevant Papers**
+
 Wolberg, W.H., & Mangasarian, O.L. (1990). Multisurface method of pattern separation for medical diagnosis applied to breast cytology. In Proceedings of the National Academy of Sciences, 87, 9193--9196. 
 
 Zhang, J. (1992). Selecting typical instances in instance-based learning. In Proceedings of the Ninth International Machine Learning Conference (pp. 470--479). Aberdeen, Scotland: Morgan Kaufmann.
 
 **Papers That Cite This Data Set**
+
 Gavin Brown. Diversity in Neural Network Ensembles. The University of Birmingham. 2004.
 
 Krzysztof Grabczewski and Wl/odzisl/aw Duch. Heterogeneous Forests of Decision Trees. ICANN. 2002.
@@ -133,6 +137,7 @@ Adil M. Bagirov and Alex Rubinov and A. N. Soukhojak and John Yearwood. Unsuperv
 Rudy Setiono and Huan Liu. Neural-Network Feature Selector. Department of Information Systems and Computer Science National University of Singapore.
 
 **Citation Request**
+
 This breast cancer databases was obtained from the University of Wisconsin Hospitals, Madison from Dr. William H. Wolberg. If you publish results when using this database, then please include this information in your acknowledgements. Also, please cite one or more of: 
 1.  O. L. Mangasarian and W. H. Wolberg: "Cancer diagnosis via linear programming", SIAM News, Volume 23, Number 5, September 1990, pp 1 & 18. 
 2.  William H. Wolberg and O.L. Mangasarian: "Multisurface method of pattern separation for medical diagnosis applied to breast cytology", Proceedings of the National Academy of Sciences, U.S.A., Volume 87, December 1990, pp 9193-9196. 
