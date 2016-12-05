@@ -4,8 +4,6 @@ William Barlow, PhD
 
 August 2006
 
-\
-
 **Overview**
 
 This dataset includes 2,392,998 screening mammograms (called the "index
@@ -19,15 +17,11 @@ mammography data and incident breast cancer (invasive or ductal
 carcinoma in situ) within one year following the index screening
 mammogram was assessed.
 
-\
-
 To reduce the size of the dataset, the data have been aggregated by the
 cross-classification of risk factors and outcome with a count indicating
 the frequency of each combination. This reduces the dataset to 280,660
 records. The variables in the ASCII dataset "risk.txt" are described in
 the table.
-
-\
 
 To create a deidentified public use dataset, it is necessary to protect
 the confidentiality of the women, the radiology facilities, and the
@@ -36,8 +30,6 @@ in the Breast Cancer Surveillance Consortium. For these reasons, the
 data are limited to the variables below. Notably, the data do not
 include any dates, origin of the data, patient identifiers, nor the
 assessment (outcome) of the index screening mammogram.
-
-\
 
 Caveats:
 
@@ -70,121 +62,24 @@ Caveats:
     updated annually. However, this dataset is static and there is no
     plan to update this data.
 
-****\
-
-+--------------------+--------------------+--------------------+--------------------+
-| **Variable**       | **Name**           | **Columns**        | **Coding**         |
-+--------------------+--------------------+--------------------+--------------------+
-| 1                  | menopaus           | 1                  | 0=pre-menopausal,  |
-|                    |                    |                    | 1=post-menopausal  |
-|                    |                    |                    | or age &gt;= 55,   |
-|                    |                    |                    | 9=unknown          |
-+--------------------+--------------------+--------------------+--------------------+
-| 2                  | agegrp             | 3-4                | 1=35-39, 2=40-44,  |
-|                    |                    |                    | 3=45-49, 4=50-54,  |
-|                    |                    |                    | 5=55-59, 6=60-64,  |
-|                    |                    |                    | 7=65-69, 8=70-74,  |
-|                    |                    |                    | 9=75-79, 10=80-84  |
-+--------------------+--------------------+--------------------+--------------------+
-| 3                  | density            | 6                  | BI-RADS breast     |
-|                    |                    |                    | density codes:     |
-|                    |                    |                    | 1=Almost entirely  |
-|                    |                    |                    | fat, 2=Scattered   |
-|                    |                    |                    | fibroglandular     |
-|                    |                    |                    | densities,         |
-|                    |                    |                    | 3=Heterogenously   |
-|                    |                    |                    | dense, 4=Extremely |
-|                    |                    |                    | dense, 9=Unknown   |
-|                    |                    |                    | or different       |
-|                    |                    |                    | measurement system |
-+--------------------+--------------------+--------------------+--------------------+
-| 4                  | race               | 8                  | 1=white,           |
-|                    |                    |                    | 2=Asian/Pacific    |
-|                    |                    |                    | Islander, 3=black, |
-|                    |                    |                    | 4=Native American, |
-|                    |                    |                    | 5=other/mixed,     |
-|                    |                    |                    | 9=unknown          |
-+--------------------+--------------------+--------------------+--------------------+
-| 5                  | Hispanic           | 10                 | 0=no, 1=yes,       |
-|                    |                    |                    | 9=unknown          |
-+--------------------+--------------------+--------------------+--------------------+
-| 6                  | bmi                | 12                 | 1=10-24.99,        |
-|                    |                    |                    | 2=25-29.99,        |
-|                    |                    |                    | 3=30-34.99, 4=35   |
-|                    |                    |                    | or more, 9=unknown |
-+--------------------+--------------------+--------------------+--------------------+
-| 7                  | agefirst           | 14                 | Age at first       |
-|                    |                    |                    | birth: 0=Age &lt;  |
-|                    |                    |                    | 30, 1=Age 30 or    |
-|                    |                    |                    | greater,           |
-|                    |                    |                    | 2=Nulliparous,     |
-|                    |                    |                    | 9=unknown          |
-+--------------------+--------------------+--------------------+--------------------+
-| 8                  | nrelbc             | 16                 | Number of first    |
-|                    |                    |                    | degree relatives   |
-|                    |                    |                    | with breast        |
-|                    |                    |                    | cancer: 0=zero,    |
-|                    |                    |                    | 1=one, 2=2 or      |
-|                    |                    |                    | more, 9=unknown    |
-+--------------------+--------------------+--------------------+--------------------+
-| 9                  | brstproc           | 18                 | Previous breast    |
-|                    |                    |                    | procedure: 0=no,   |
-|                    |                    |                    | 1=yes, 9=unknown   |
-+--------------------+--------------------+--------------------+--------------------+
-| 10                 | lastmamm           | 20                 | Result of last     |
-|                    |                    |                    | mammogram before   |
-|                    |                    |                    | the index          |
-|                    |                    |                    | mammogram:         |
-|                    |                    |                    | 0=negative,        |
-|                    |                    |                    | 1=false positive,  |
-|                    |                    |                    | 9=unknown          |
-+--------------------+--------------------+--------------------+--------------------+
-| 11                 | surgmeno           | 22                 | Surgical           |
-|                    |                    |                    | menopause:         |
-|                    |                    |                    | 0=natural,         |
-|                    |                    |                    | 1=surgical,        |
-|                    |                    |                    | 9=unknown or not   |
-|                    |                    |                    | menopausal         |
-|                    |                    |                    | (menopaus=0 or     |
-|                    |                    |                    | menopaus=9)        |
-+--------------------+--------------------+--------------------+--------------------+
-| 12                 | hrt                | 24                 | Current hormone    |
-|                    |                    |                    | therapy: 0=no,     |
-|                    |                    |                    | 1=yes, 9=unknown   |
-|                    |                    |                    | or not menopausal  |
-|                    |                    |                    | (menopaus=0 or     |
-|                    |                    |                    | menopaus=9)        |
-+--------------------+--------------------+--------------------+--------------------+
-| 13                 | invasive           | 26                 | Diagnosis of       |
-|                    |                    |                    | invasive breast    |
-|                    |                    |                    | cancer within one  |
-|                    |                    |                    | year of the index  |
-|                    |                    |                    | screening          |
-|                    |                    |                    | mammogram: 0=no,   |
-|                    |                    |                    | 1=yes              |
-+--------------------+--------------------+--------------------+--------------------+
-| 14                 | cancer             | 28                 | Diagnosis of       |
-|                    |                    |                    | invasive or ductal |
-|                    |                    |                    | carcinoma in situ  |
-|                    |                    |                    | breast cancer      |
-|                    |                    |                    | within one year of |
-|                    |                    |                    | the index          |
-|                    |                    |                    | screening          |
-|                    |                    |                    | mammogram: 0=no,   |
-|                    |                    |                    | 1=yes              |
-+--------------------+--------------------+--------------------+--------------------+
-| 15                 | training           | 30                 | Training data:     |
-|                    |                    |                    | 0=no (validation), |
-|                    |                    |                    | 1=yes (training)   |
-+--------------------+--------------------+--------------------+--------------------+
-| 16                 | count              | 32-37              | Frequency count of |
-|                    |                    |                    | this combination   |
-|                    |                    |                    | of covariates and  |
-|                    |                    |                    | outcomes (all      |
-|                    |                    |                    | variables 1 to 15) |
-+--------------------+--------------------+--------------------+--------------------+
-
-****\
+| Variable | Name     | Columns | Coding                                                                                                                                                                          |
+|----------|----------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1        | menopaus | 1       | 0=pre-menopausal, 1=post-menopausal or age >= 55, 9=unknown                                                                                                                     |
+| 2        | agegrp   | 3-4     | 1=35-39, 2=40-44, 3=45-49, 4=50-54, 5=55-59, 6=60-64, 7=65-69, 8=70-74, 9=75-79, 10=80-84                                                                                       |
+| 3        | density  | 6       | BI-RADS breast density codes: 1=Almost entirely fat, 2=Scattered fibroglandular densities, 3=Heterogenously dense, 4=Extremely dense, 9=Unknown or different measurement system |
+| 4        | race     | 8       | 1=white, 2=Asian/Pacific Islander, 3=black, 4=Native American, 5=other/mixed, 9=unknown                                                                                         |
+| 5        | Hispanic | 10      | 0=no, 1=yes, 9=unknown                                                                                                                                                          |
+| 6        | bmi      | 12      | 1=10-24.99, 2=25-29.99, 3=30-34.99, 4=35 or more, 9=unknown                                                                                                                     |
+| 7        | agefirst | 14      | Age at first birth: 0=Age < 30, 1=Age 30 or greater, 2=Nulliparous, 9=unknown                                                                                                   |
+| 8        | nrelbc   | 16      | Number of first degree relatives with breast cancer: 0=zero, 1=one, 2=2 or more, 9=unknown                                                                                      |
+| 9        | brstproc | 18      | Previous breast procedure: 0=no, 1=yes, 9=unknown                                                                                                                               |
+| 10       | lastmamm | 20      | Result of last mammogram before the index mammogram: 0=negative, 1=false positive, 9=unknown                                                                                    |
+| 11       | surgmeno | 22      | Surgical menopause: 0=natural, 1=surgical, 9=unknown or not menopausal (menopaus=0 or menopaus=9)                                                                               |
+| 12       | hrt      | 24      | Current hormone therapy: 0=no, 1=yes, 9=unknown or not menopausal (menopaus=0 or menopaus=9)                                                                                    |
+| 13       | invasive | 26      | Diagnosis of invasive breast cancer within one year of the index screening mammogram: 0=no, 1=yes                                                                               |
+| 14       | cancer   | 28      | Diagnosis of invasive or ductal carcinoma in situ breast cancer within one year of the index screening mammogram: 0=no, 1=yes                                                   |
+| 15       | training | 30      | Training data: 0=no (validation), 1=yes (training)                                                                                                                              |
+| 16       | count    | 32-37   |                                                                                                                                                                                 |
 
 **Users of the data must reference this publication:**
 
@@ -193,8 +88,6 @@ Carney PA, Tice JA, Buist DSM, Geller BM, Rosenberg R, Yankaskas BC,
 Kerlikowske K. Prospective breast cancer risk prediction model for women
 undergoing screening mammography. J Natl Cancer Inst. 2006;
 98:1204-1214.
-
-\
 
 **And acknowledge the funding source of the BCSC with the following
 reference:**
@@ -205,14 +98,10 @@ Institute-funded Breast Cancer Surveillance Consortium
 requesting BCSC data for research purposes are provided at:
 http://breastscreening.cancer.gov/.”
 
-\
-
 Information about receiving data from the BCSC may also be included in
 the methods section using language such as: “Data for this study was
 obtained from the BCSC Data Resource. More information regarding this
 resource is available at: http://breastscreening.cancer.gov/.”
-
-\
 
 **Acknowledging the BCSC and Investigators:**
 
@@ -221,30 +110,20 @@ collect and make available this valuable data resource. If journals will
 allow acknowledgements, the BCSC suggest the following two options in
 addition to listing grant numbers described above”
 
-\
-
 “We thank the BCSC investigators, participating mammography facilities,
 and radiologists for the data they have provided for this study. A list
 of the BCSC investigators and procedures for requesting BCSC data for
 research purposes are provided at: http://breastscreening.cancer.gov/.”
 
-\
-
 **AND/OR**
-
-\
 
 If one or more authors are BCSC members, the BCSC may be acknowledged at
 the end of the authorship list with the following: “Smith A, Jones B, …
 for the Breast Cancer Surveillance Consortium.”
 
-****\
-
 **Files:**
 
 -   Dataset with multiple observations per woman: risk.txt
 -   Dataset with one observation per woman: risk\_rand.txt
-
-\
 
 **Source:** http://www.bcsc-research.org/rfdataset/dataset.html
