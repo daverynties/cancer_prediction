@@ -1,0 +1,91 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 1
+Relation:     post-process
+Instances:    699
+Attributes:   10
+              Clump Thickness
+              Uniformity of Cell Size
+              Uniformity of Cell Shape
+              Marginal Adhesion
+              Single Epithelial Cell Size
+              Bare Nuclei
+              Bland Chromatin
+              Normal Nucleoli
+              Mitoses
+              Class
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Uniformity of Cell Size <= 2
+|   Bare Nuclei <= 3: Benign (405.39/2.0)
+|   Bare Nuclei > 3
+|   |   Clump Thickness <= 3: Benign (11.55)
+|   |   Clump Thickness > 3
+|   |   |   Bland Chromatin <= 2
+|   |   |   |   Marginal Adhesion <= 3: Malignant (2.0)
+|   |   |   |   Marginal Adhesion > 3: Benign (2.0)
+|   |   |   Bland Chromatin > 2: Malignant (8.06/0.06)
+Uniformity of Cell Size > 2
+|   Uniformity of Cell Shape <= 2
+|   |   Clump Thickness <= 5
+|   |   |   Marginal Adhesion <= 7: Benign (18.0)
+|   |   |   Marginal Adhesion > 7: Malignant (1.0)
+|   |   Clump Thickness > 5: Malignant (4.0)
+|   Uniformity of Cell Shape > 2
+|   |   Uniformity of Cell Size <= 4
+|   |   |   Bare Nuclei <= 2
+|   |   |   |   Marginal Adhesion <= 3
+|   |   |   |   |   Normal Nucleoli <= 7: Benign (10.41/0.21)
+|   |   |   |   |   Normal Nucleoli > 7: Malignant (1.0)
+|   |   |   |   Marginal Adhesion > 3: Malignant (3.0)
+|   |   |   Bare Nuclei > 2
+|   |   |   |   Clump Thickness <= 6
+|   |   |   |   |   Uniformity of Cell Size <= 3
+|   |   |   |   |   |   Clump Thickness <= 5: Malignant (12.0/1.0)
+|   |   |   |   |   |   Clump Thickness > 5: Benign (1.0)
+|   |   |   |   |   Uniformity of Cell Size > 3
+|   |   |   |   |   |   Marginal Adhesion <= 5: Benign (5.79/1.0)
+|   |   |   |   |   |   Marginal Adhesion > 5: Malignant (5.0)
+|   |   |   |   Clump Thickness > 6: Malignant (31.79/1.0)
+|   |   Uniformity of Cell Size > 4: Malignant (177.0/5.0)
+
+Number of Leaves  : 	17
+
+Size of the tree : 	33
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         689               98.5694 %
+Incorrectly Classified Instances        10                1.4306 %
+Kappa statistic                          0.9685
+Mean absolute error                      0.0281
+Root mean squared error                  0.1173
+Relative absolute error                  6.2156 %
+Root relative squared error             24.6774 %
+Total Number of Instances              699     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.985    0.012    0.993      0.985    0.989      0.969    0.990     0.992     Benign
+                 0.988    0.015    0.971      0.988    0.979      0.969    0.990     0.972     Malignant
+Weighted Avg.    0.986    0.013    0.986      0.986    0.986      0.969    0.990     0.985     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 451   7 |   a = Benign
+   3 238 |   b = Malignant
+
